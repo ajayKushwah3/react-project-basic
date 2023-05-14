@@ -217,7 +217,7 @@ a:focus-visible {
 .FilterBox ul li:nth-child(even) {
   text-align: right;
 }
-.FilterBox ul li:nth-child(even) span {
+.FilterBox ul li:nth-child(even) label {
   margin-left: auto;
 }
 .FilterBox ul li label {
