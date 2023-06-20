@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import Webroutes from './Components/Webroutes';
+import './App.css'
+import MainHeader from './Components/MainHeader/MainHeader'
+import Footer from './Components/Footer/Footer';
+import classes from './Components/assets/css/fw.module.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return ( 
+        <>
+            <MainHeader />
+            <main className = { classes['mainSection'] } >
+            <Webroutes />
+            </main> 
+            <Footer />
+        </>
+    );
 }
 
 export default App;

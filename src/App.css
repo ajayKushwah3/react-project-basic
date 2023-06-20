@@ -1,38 +1,58 @@
-.App {
-  text-align: center;
+.fixed-header {
+  background: #fff;
+  transition: all 0.5s;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2196078431);
+}
+.fixed-header img {
+  height: 70px;
+  transition: all 0.5s;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.slick-dots {
+  bottom: 50px;
+}
+.slick-dots li {
+  padding: 0;
+}
+.slick-dots li button {
+  padding: 0;
+}
+.slick-dots li button::before {
+  width: 20px;
+  height: 20px;
+  content: "";
+  background: var(--color-s1);
+  border-radius: 20px 0 20px 0;
+  opacity: 0.5;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+button.slick-arrow {
+  width: 40px;
+  height: 40px;
+  font-size: 40px;
+}
+button.slick-arrow.slick-next::before, button.slick-arrow.slick-prev::before {
+  color: #502F0E;
+  font-family: fangsong;
+  text-shadow: 0px 0px 7px rgba(0, 0, 0, 0.4);
+  font-size: 40px;
+}
+button.slick-arrow.slick-next {
+  top: 90%;
+  right: 12%;
+}
+button.slick-arrow.slick-prev {
+  top: 90%;
+  left: 75%;
+}
+
+@media only screen and (max-width: 767px) {
+  button.slick-arrow.slick-next {
+    top: 110%;
+    right: 42%;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  button.slick-arrow.slick-prev {
+    top: 110%;
+    left: 42%;
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
+}/*# sourceMappingURL=App.css.map */
