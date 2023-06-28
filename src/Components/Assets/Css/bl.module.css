@@ -1,0 +1,672 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+:root {
+  --font-family: "Public Sans", sans-serif;
+  --primary-color: #60A5FA;
+  --secondary-color: #2563EB;
+  --white-color: #fff;
+  --black-color: #000;
+  --color-1: #914ADB;
+  --color-2: #DC2626;
+  --color-3: #BFDBFE;
+  --color-4: #F5F5F5;
+  --color-5: #4B5563;
+  --color-6: #00000040;
+  --font-size-12: 12px;
+  --font-size-14: 14px;
+  --font-size-24: 24px;
+  --font-size-32: 32px;
+  --line-height-14: 14px;
+  --line-height-16: 16px;
+  --line-height-28: 28px;
+  --line-height-38: 38px;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+h3 {
+  font-size: var(--font-size-24);
+  line-height: var(--line-height-28);
+  font-weight: 600;
+  font-family: var(--font-family);
+  color: var(--color-5);
+}
+
+body {
+  font-size: var(--font-size-14);
+  line-height: var(--line-height-16);
+  font-family: var(--font-family);
+  font-weight: 500;
+  padding: 0;
+  margin: 0;
+  padding-left: 90px;
+  background-image: url("../Img/bgimg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+/* =========== Comman css ===========*/
+ul {
+  padding-left: 0;
+}
+ul li {
+  list-style: none;
+}
+
+.btn:not(:disabled):not(.disabled) {
+  color: #fff;
+  font-family: var(--font-family);
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 600;
+  padding: 3px 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2px solid var(--secondary-color);
+  transition: all 0.15s ease-in-out;
+}
+.btn:not(:disabled):not(.disabled).btnThame {
+  background-color: var(--secondary-color);
+}
+.btn:not(:disabled):not(.disabled).btnThame:hover {
+  transition: all 0.15s ease-in-out;
+  background-color: var(--color-1);
+  border: 2px solid var(--color-1);
+}
+.btn:not(:disabled):not(.disabled).btnBorder {
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+  color: var(--secondary-color);
+}
+.btn:not(:disabled):not(.disabled).btnBorder:hover {
+  transition: all 0.15s ease-in-out;
+}
+.btn:not(:disabled):not(.disabled):focus, .btn:not(:disabled):not(.disabled):focus-visible {
+  outline: unset;
+}
+
+/* =========== Side Bar ===========*/
+.main-header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 90px;
+  background-color: var(--primary-color);
+  height: 100vh;
+}
+.main-header .mobilenave {
+  display: none;
+}
+
+.NavSidebar {
+  display: flex;
+  flex-wrap: wrap;
+}
+.NavSidebar ul li a {
+  cursor: pointer;
+  text-align: center;
+  width: 100%;
+  padding: 14px 0;
+  transition: 0.5s;
+  font-size: 16px;
+  line-height: 19px;
+  display: block;
+  color: var(--color-5);
+}
+.NavSidebar ul li a svg {
+  transition: 0.5s;
+}
+.NavSidebar ul li:hover span {
+  transition: 0.5s;
+  color: var(--white-color);
+}
+.NavSidebar ul li:hover span svg {
+  transition: 0.5s;
+  fill: #fff;
+}
+.NavSidebar ul li:hover span svg path {
+  fill: #fff;
+}
+.NavSidebar .bottfooter,
+.NavSidebar .topHeader {
+  width: 100%;
+}
+.NavSidebar .bottfooter {
+  position: absolute;
+  bottom: 0;
+  background-color: var(--primary-color);
+}
+
+.mainSection {
+  padding: 10px;
+  position: relative;
+}
+.mainSection .RightNavBAr {
+  position: fixed;
+  top: 23px;
+  right: 23px;
+  padding-top: 7px;
+  padding-right: 7px;
+  z-index: 1;
+}
+.mainSection .RightNavBAr ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: -7px;
+}
+.mainSection .RightNavBAr ul li {
+  padding: 7px;
+}
+.mainSection .RightNavBAr ul li a {
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  background: #2563EB;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+}
+.mainSection .RightNavBAr ul li a svg {
+  width: 25px;
+  fill: #fff;
+}
+.mainSection .RightNavBAr ul li a svg path {
+  fill: #fff;
+}
+
+/*---------------Input form-control css---------------- */
+.saerchBox {
+  position: relative;
+}
+.saerchBox input {
+  background: #F5F5F5;
+  border-radius: 5px;
+  border: 1px solid #F5F5F5;
+  padding: 15px 35px 15px 15px;
+  width: 100%;
+}
+.saerchBox input::-moz-placeholder {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: #4B5563;
+}
+.saerchBox input::placeholder {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: #4B5563;
+}
+.saerchBox input:focus, .saerchBox input:focus-visible {
+  outline: unset;
+}
+.saerchBox .SerchButton {
+  background-color: unset;
+  border: unset;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  padding: 12px 12px 10px;
+}
+.saerchBox .SerchButton svg {
+  width: 20px;
+}
+
+/* =========== Modal Css ===========*/
+.modalDiloge {
+  position: relative;
+  z-index: 9;
+}
+
+.modalBackground {
+  position: fixed;
+  width: 100%;
+  cursor: pointer;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5019607843);
+}
+
+.modalContainer {
+  background: #FFFFFF;
+  box-shadow: 0px 10px 18px rgba(0, 0, 0, 0.08);
+  border-radius: 5px;
+  position: fixed;
+  max-width: 460px;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  padding: 30px;
+  padding-bottom: 60px;
+}
+.modalContainer.ciqmodalC {
+  max-width: 560px;
+}
+
+.modalHeader {
+  margin-bottom: 30px;
+}
+.modalHeader .menuPopup {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.modalHeader .menuPopup span {
+  cursor: pointer;
+  height: 30px;
+}
+.modalHeader .menuPopup span svg {
+  width: 20px;
+}
+.modalHeader .menuPopup .dotMenus {
+  position: absolute;
+  right: 15px;
+  top: 60px;
+  background: #FFFFFF;
+  padding: 10px 8px;
+  box-shadow: 0px 10px 18px rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+}
+.modalHeader .menuPopup .dotMenus ul {
+  margin: 0;
+  padding: 0;
+}
+.modalHeader .menuPopup .dotMenus ul li {
+  margin-bottom: 5px;
+}
+.modalHeader .menuPopup .dotMenus ul li:last-child {
+  margin-bottom: 0;
+}
+.modalHeader .menuPopup .dotMenus ul li a {
+  transition: all 0.5s ease-in-out;
+  border-radius: 8px;
+  display: flex;
+  text-decoration: none;
+  padding: 5px 12px;
+  align-items: center;
+}
+.modalHeader .menuPopup .dotMenus ul li a:hover {
+  background: #F5F5F5;
+  transition: all 0.5s ease-in-out;
+}
+.modalHeader .menuPopup .dotMenus ul li a span {
+  font-weight: 400;
+  font-size: var(--font-size-14);
+  line-height: 20px;
+  height: -moz-fit-content;
+  height: fit-content;
+  color: var(--color-5);
+  padding-left: 10px;
+}
+.modalHeader .menuPopup .dotMenus ul li a svg {
+  width: 14px;
+}
+
+.modalFooter {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: #fff;
+  text-align: right;
+  padding: 30px;
+}
+
+.dataList ul li.cdItems a .namec .icones img {
+  width: 18px;
+}
+.dataList ul li.cdItems a .nextlink .linkurl {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--secondary-color);
+}
+.dataList ul li.cdItems a .nextlink .linkurl:hover {
+  color: var(--color-1);
+}
+.dataList ul li a {
+  padding: 15px 0;
+  transition: 0.5s;
+  text-decoration: none;
+  color: var(--color-5);
+}
+.dataList ul li a.gdataList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dataList ul li a.gdataList:hover {
+  color: var(--secondary-color);
+  transition: 0.5s;
+}
+.dataList ul li a.gdataList:hover .nextlink span svg {
+  fill: #2563EB;
+  height: 12px;
+}
+.dataList ul li a.gdataList:hover .nextlink span svg path {
+  fill: #2563EB;
+}
+.dataList ul li a.gdataList:hover .titlename {
+  transition: 0.5s;
+  color: var(--secondary-color);
+}
+.dataList ul li a.gdataList .namec {
+  display: flex;
+  align-items: center;
+}
+.dataList ul li a.gdataList .icones {
+  width: 30px;
+  margin-right: 15px;
+}
+.dataList ul li a.gdataList .icones img {
+  width: 24px;
+}
+.dataList ul li a.gdataList .titlename {
+  font-weight: 400;
+  font-size: var(--font-size-12);
+  line-height: var(--font-size-14);
+  color: var(--color-5);
+}
+.dataList ul li a.gdataList .nextlink span svg {
+  fill: #4B5563;
+  height: 12px;
+}
+.dataList ul li a.gdataList .nextlink span svg path {
+  fill: #4B5563;
+}
+.dataList ul.mciqtItmes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  margin: -5px;
+}
+.dataList ul.mciqtItmes li {
+  padding: 5px;
+}
+.dataList ul.mciqtItmes li a {
+  background: #F5F5F5;
+  border-radius: 8px;
+  display: block;
+  padding: 10px 20px;
+}
+.dataList ul.mciqtItmes li a .titlename {
+  font-weight: 600;
+  font-size: var(--font-size-14);
+  line-height: 20px;
+  color: var(--secondary-color);
+}
+.dataList ul.mciqtItmes li a .datavalue {
+  font-weight: 400;
+  font-size: var(--font-size-14);
+  line-height: 20px;
+  color: var(--color-5);
+  display: block;
+  margin-bottom: 10px;
+}
+.dataList ul.mciqtItmes li a .icones svg path {
+  stroke: var(--valuecolor);
+}
+
+/* =========== Home===========*/
+.HomeSection {
+  position: relative;
+}
+.HomeSection .screBody {
+  max-width: 450px;
+  margin-top: 10px;
+}
+.HomeSection .screBody ul {
+  margin: -5px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+.HomeSection .screBody ul .listCard {
+  padding: 5px;
+  width: 100%;
+}
+.HomeSection .screBody ul .listCard .screlink {
+  background: #FFFFFF;
+  box-shadow: 0px 10px 18px rgba(0, 0, 0, 0.08);
+  display: flex;
+  text-decoration: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  transition: all 0.4s;
+}
+.HomeSection .screBody ul .listCard .screlink:hover {
+  transition: all 0.4s;
+  box-shadow: inset 0px 0px 10px 0px #914ADB;
+}
+.HomeSection .screBody ul .listCard .screlink .iconetest {
+  width: 38px;
+  margin-right: 15px;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #F5F5F5;
+  border-radius: 8px;
+}
+.HomeSection .screBody ul .listCard .screlink .iconetest img {
+  height: 21px;
+}
+.HomeSection .screBody ul .listCard .screlink .contenttext b {
+  display: block;
+  font-weight: 600;
+  font-size: var(--font-size-14);
+  line-height: 20px;
+  color: var(--color-5);
+}
+.HomeSection .screBody ul .listCard .screlink .contenttext span {
+  display: block;
+  font-weight: 400;
+  font-size: var(--font-size-14);
+  line-height: 20px;
+  color: var(--color-5);
+}
+.HomeSection .screBody ul .listCard .screlink .contenttext span.emergency-break {
+  color: #DC2626;
+}
+
+.imageBox {
+  max-width: 450px;
+  max-height: 450px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.imageBox img {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+
+.arrowBBox {
+  display: flex;
+  justify-content: space-between;
+}
+
+.arrowbody {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: 100px;
+}
+.arrowbody ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -5px;
+  width: min(max(170px, 11vw), 210px);
+  justify-content: center;
+}
+.arrowbody ul li {
+  padding: 5px;
+  text-align: center;
+  text-align: -webkit-center;
+}
+.arrowbody ul li:first-child {
+  width: 100%;
+}
+.arrowbody ul li .btnArrow {
+  background: linear-gradient(135deg, #FFFFFF 0%, #EAEAEA 100%);
+  border-radius: 50%;
+  width: min(max(45px, 3.3vw), 60px);
+  height: min(max(45px, 3.3vw), 60px);
+  border: unset;
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+.arrowbody ul li .btnArrow:hover {
+  background: var(--color-1);
+}
+.arrowbody ul li .btnArrow:hover rect,
+.arrowbody ul li .btnArrow:hover path,
+.arrowbody ul li .btnArrow:hover svg {
+  fill: #fff;
+}
+.arrowbody ul li .btnArrow.iadata {
+  font-weight: 400;
+  font-size: min(max(22px, 1.7vw), 32px);
+  line-height: 38px;
+  color: #FFFFFF;
+  background: var(--color-1);
+}
+.arrowbody ul li .btnArrow svg {
+  width: 18px;
+}
+
+@media only screen and (max-width: 767px) {
+  body {
+    padding-left: 0;
+    padding-top: 60px;
+    padding-bottom: 80px;
+  }
+  .mainSection .RightNavBAr {
+    position: fixed;
+    bottom: 0;
+    top: unset;
+    right: 0;
+    padding-top: 0;
+    padding-right: 0;
+    z-index: 1;
+    width: 100%;
+  }
+  .mainSection .RightNavBAr ul {
+    display: flex;
+    grid-template-columns: unset;
+    margin: 0;
+    padding: 10px;
+    justify-content: space-between;
+    width: 100%;
+    background: #2563EB;
+    border-radius: 10px 10px 0 0;
+  }
+  .mainSection .RightNavBAr ul li {
+    padding: 0;
+  }
+  .mainSection .RightNavBAr ul li a {
+    cursor: pointer;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    border-radius: 0;
+    justify-content: center;
+    align-items: center;
+  }
+  .mainSection .RightNavBAr ul li a svg {
+    width: 20px;
+    fill: #fff;
+  }
+  .mainSection .RightNavBAr ul li a svg path {
+    fill: #fff;
+  }
+  .modalContainer {
+    max-width: 90%;
+    max-height: 550px;
+    overflow-y: scroll;
+  }
+  .modalContainer.ciqmodalC {
+    max-width: 90%;
+  }
+  .main-header {
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 0 15px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9;
+  }
+  .main-header.mobileActive .topHeader {
+    transform: translateX(0%);
+    transition: all 0.5s ease-in-out;
+    visibility: visible;
+    pointer-events: visible;
+    opacity: 1;
+  }
+  .main-header.mobileActive .topHeader ul li a img {
+    filter: brightness(0);
+    width: 23px;
+  }
+  .main-header .mobilenave {
+    display: block;
+  }
+  .main-header .topHeader {
+    visibility: hidden;
+    pointer-events: none;
+    opacity: 0;
+    position: fixed;
+    width: 100%;
+    max-width: 90px;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: #60a5fa;
+    z-index: 9;
+    transform: translateX(-100%);
+    transition: all 0.5s ease-in-out;
+  }
+  .main-header .topHeader ul {
+    margin-top: 2px;
+  }
+  .main-header .NavSidebar .bottfooter {
+    position: unset;
+  }
+  .main-header .NavSidebar .bottfooter .NavFooterLink ul {
+    margin: 0;
+    display: flex;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-right: 0;
+    margin-left: auto;
+    align-items: center;
+  }
+  .main-header .NavSidebar .bottfooter .NavFooterLink ul li a {
+    padding: 12px 10px;
+    text-decoration: none;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .arrowBBox {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .arrowBBox .arrowbody {
+    margin: 50px 10px 0;
+  }
+}/*# sourceMappingURL=bl.module.css.map */

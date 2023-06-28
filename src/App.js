@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import MainHeader from './Components/MainHeader/MainHeader';
+import classes from './Components/Assets/Css/bl.module.css'
+import RightNav from './Components/MainHeader/RightNav';
+import Home from './Components/Pages/Home';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+        <MainHeader />
+      <main className = { classes['mainSection'] } >
+        <RightNav />
+        <Home />
+      </main> 
+    </>
   );
 }
 
